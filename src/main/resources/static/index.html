@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring Boot SSE Demo</title>
+</head>
+<body>
+<h1>Server-Sent Events Demo</h1>
+
+<p>Status: <strong id="status">Connecting...</strong></p>
+<button id="connect">Connect</button>
+<button id="disconnect">Disconnect</button>
+
+<h2>Received Events</h2>
+<ul id="events"></ul>
+
+<script>
+    let eventSource;
+
+    const status = document.getElementById("status");
+    const events = document.getElementById("events");
+
+    function connect() {
+        if (eventSource) {
+            eventSource.close();
+        }
+
+        eventSource = new EventSource("/api/events");
+
+        eventSource.onopen = () => {
+            status.textContent = "Connected";
+        };
+
+        eventSource.onmessage = (event) => {
+            const item = document.createElement("li");
+            item.textContent = `ID ${event.lastEventId}: ${event.data}`;
+            events.prepend(item);
+        };
+
+        eventSource.onerror = () => {
+            status.textContent = eventSource.readyState === 2
+                ? "Disconnected"
+                : "Connection lost. Reconnecting...";
+        };
+    }
+
+    function disconnect() {
+        if (eventSource) {
+            eventSource.close();
+            eventSource = null;
+        }
+
+        status.textContent = "Disconnected";
+    }
+
+    document.getElementById("connect").addEventListener("click", connect);
+    document.getElementById("disconnect").addEventListener("click", disconnect);
+
+    connect();
+</script>
+</body>
+</html>
