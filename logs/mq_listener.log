@@ -1,0 +1,73 @@
+2026-10-18T15:58:12.637+05:30  INFO 4272 --- [mq_listener] [main] com.dfn.sse_demo.SseDemoApplication   : Starting MqListenerApplication using Java 17.0.15 with PID 4272 (D:\DFN\DFN Projects\Java projects\My projects\sse_demo\target\classes started by ruvindum in D:\DFN\DFN Projects\Java projects\My projects\sse_demo)
+2026-10-18T15:58:12.640+05:30  INFO 4272 --- [mq_listener] [main] com.dfn.sse_demo.SseDemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-10-18T15:58:13.497+05:30  INFO 4272 --- [mq_listener] [main] com.dfn.sse_demo.SseDemoApplication   : Started MqListenerApplication in 1.437 seconds (process running for 2.681)
+2026-10-18T16:14:02.353+05:30  INFO 9716 --- [mq_listener] [main] com.dfn.sse_demo.SseDemoApplication   : Starting MqListenerApplication using Java 17.0.15 with PID 9716 (D:\DFN\DFN Projects\Java projects\My projects\sse_demo\target\classes started by ruvindum in D:\DFN\DFN Projects\Java projects\My projects\sse_demo)
+2026-10-18T16:14:02.355+05:30  INFO 9716 --- [mq_listener] [main] com.dfn.sse_demo.SseDemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-10-18T16:14:02.763+05:30  INFO 9716 --- [mq_listener] [main] com.dfn.sse_demo.SseDemoApplication   : Started MqListenerApplication in 0.739 seconds (process running for 1.318)
+2026-10-18T16:15:11.178+05:30  INFO 24528 --- [mq_listener] [main] com.dfn.sse_demo.SseDemoApplication   : Starting MqListenerApplication using Java 21.0.7 with PID 24528 (D:\DFN\DFN Projects\Java projects\My projects\sse_demo\target\classes started by ruvindum in D:\DFN\DFN Projects\Java projects\My projects\sse_demo)
+2026-10-18T16:15:11.179+05:30  INFO 24528 --- [mq_listener] [main] com.dfn.sse_demo.SseDemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-10-18T16:15:11.650+05:30  INFO 24528 --- [mq_listener] [main] com.dfn.sse_demo.SseDemoApplication   : Started MqListenerApplication in 0.83 seconds (process running for 1.582)
+2026-10-18T16:17:20.966+05:30  INFO 21348 --- [mq_listener] [main] com.dfn.sse_demo.SseDemoApplication      : Starting SseDemoApplication using Java 21.0.7 with PID 21348 (D:\DFN\DFN Projects\Java projects\My projects\sse_demo\target\classes started by ruvindum in D:\DFN\DFN Projects\Java projects\My projects\sse_demo)
+2026-10-18T16:17:20.967+05:30  INFO 21348 --- [mq_listener] [main] com.dfn.sse_demo.SseDemoApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-10-18T16:17:21.383+05:30  INFO 21348 --- [mq_listener] [main] com.dfn.sse_demo.SseDemoApplication      : Started SseDemoApplication in 0.719 seconds (process running for 1.209)
+2026-10-18T16:18:05.697+05:30  INFO 12264 --- [mq_listener] [main] com.dfn.sse_demo.SseDemoApplication      : Starting SseDemoApplication using Java 21.0.7 with PID 12264 (D:\DFN\DFN Projects\Java projects\My projects\sse_demo\target\classes started by ruvindum in D:\DFN\DFN Projects\Java projects\My projects\sse_demo)
+2026-10-18T16:18:05.700+05:30  INFO 12264 --- [mq_listener] [main] com.dfn.sse_demo.SseDemoApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-10-18T16:19:54.527+05:30  INFO 24648 --- [mq_listener] [main] com.dfn.sse_demo.SseDemoApplication      : Starting SseDemoApplication using Java 21.0.7 with PID 24648 (D:\DFN\DFN Projects\Java projects\My projects\sse_demo\target\classes started by ruvindum in D:\DFN\DFN Projects\Java projects\My projects\sse_demo)
+2026-10-18T16:19:54.529+05:30  INFO 24648 --- [mq_listener] [main] com.dfn.sse_demo.SseDemoApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-10-18T16:20:16.240+05:30  INFO 24648 --- [mq_listener] [main] o.s.j.c.CachingConnectionFactory         : Encountered a JMSException - resetting the underlying JMS Connection
+
+jakarta.jms.JMSException: Could not connect to broker URL: tcp://192.168.14.62:61616. Reason: java.net.ConnectException: Connection timed out: getsockopt
+	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:49) ~[activemq-client-6.1.6.jar:6.1.6]
+	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:423) ~[activemq-client-6.1.6.jar:6.1.6]
+	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:353) ~[activemq-client-6.1.6.jar:6.1.6]
+	at org.apache.activemq.ActiveMQConnectionFactory.createConnection(ActiveMQConnectionFactory.java:245) ~[activemq-client-6.1.6.jar:6.1.6]
+	at org.springframework.jms.support.JmsAccessor.createConnection(JmsAccessor.java:211) ~[spring-jms-6.2.5.jar:6.2.5]
+	at org.springframework.jms.listener.AbstractJmsListeningContainer.createSharedConnection(AbstractJmsListeningContainer.java:439) ~[spring-jms-6.2.5.jar:6.2.5]
+	at org.springframework.jms.listener.AbstractJmsListeningContainer.establishSharedConnection(AbstractJmsListeningContainer.java:402) ~[spring-jms-6.2.5.jar:6.2.5]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer.establishSharedConnection(DefaultMessageListenerContainer.java:1017) ~[spring-jms-6.2.5.jar:6.2.5]
+	at org.springframework.jms.listener.AbstractJmsListeningContainer.doStart(AbstractJmsListeningContainer.java:305) ~[spring-jms-6.2.5.jar:6.2.5]
+	at org.springframework.jms.listener.AbstractJmsListeningContainer.start(AbstractJmsListeningContainer.java:290) ~[spring-jms-6.2.5.jar:6.2.5]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer.start(DefaultMessageListenerContainer.java:787) ~[spring-jms-6.2.5.jar:6.2.5]
+	at org.springframework.jms.config.JmsListenerEndpointRegistry.startIfNecessary(JmsListenerEndpointRegistry.java:242) ~[spring-jms-6.2.5.jar:6.2.5]
+	at org.springframework.jms.config.JmsListenerEndpointRegistry.start(JmsListenerEndpointRegistry.java:205) ~[spring-jms-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:323) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:510) ~[spring-context-6.2.5.jar:6.2.5]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:295) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:240) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:1006) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:630) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.4.jar:3.4.4]
+	at com.dfn.sse_demo.SseDemoApplication.main(SseDemoApplication.java:10) ~[classes/:na]
+Caused by: java.net.ConnectException: Connection timed out: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[na:na]
+	at org.apache.activemq.transport.tcp.TcpTransport.connect(TcpTransport.java:526) ~[activemq-client-6.1.6.jar:6.1.6]
+	at org.apache.activemq.transport.tcp.TcpTransport.doStart(TcpTransport.java:489) ~[activemq-client-6.1.6.jar:6.1.6]
+	at org.apache.activemq.util.ServiceSupport.start(ServiceSupport.java:55) ~[activemq-client-6.1.6.jar:6.1.6]
+	at org.apache.activemq.transport.AbstractInactivityMonitor.start(AbstractInactivityMonitor.java:172) ~[activemq-client-6.1.6.jar:6.1.6]
+	at org.apache.activemq.transport.InactivityMonitor.start(InactivityMonitor.java:52) ~[activemq-client-6.1.6.jar:6.1.6]
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:64) ~[activemq-client-6.1.6.jar:6.1.6]
+	at org.apache.activemq.transport.WireFormatNegotiator.start(WireFormatNegotiator.java:72) ~[activemq-client-6.1.6.jar:6.1.6]
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:64) ~[activemq-client-6.1.6.jar:6.1.6]
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:64) ~[activemq-client-6.1.6.jar:6.1.6]
+	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:403) ~[activemq-client-6.1.6.jar:6.1.6]
+	... 24 common frames omitted
+
+2026-10-18T16:20:49.239+05:30  INFO 3328 --- [mq_listener] [main] com.dfn.sse_demo.SseDemoApplication      : Starting SseDemoApplication using Java 21.0.7 with PID 3328 (D:\DFN\DFN Projects\Java projects\My projects\sse_demo\target\classes started by ruvindum in D:\DFN\DFN Projects\Java projects\My projects\sse_demo)
+2026-10-18T16:20:49.241+05:30  INFO 3328 --- [mq_listener] [main] com.dfn.sse_demo.SseDemoApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-10-18T16:20:49.655+05:30  INFO 3328 --- [mq_listener] [main] com.dfn.sse_demo.SseDemoApplication      : Started SseDemoApplication in 0.704 seconds (process running for 1.221)
+2026-10-18T16:21:57.267+05:30  INFO 7684 --- [mq_listener] [main] com.dfn.sse_demo.SseDemoApplication      : Starting SseDemoApplication using Java 21.0.7 with PID 7684 (D:\DFN\DFN Projects\Java projects\My projects\sse_demo\target\classes started by ruvindum in D:\DFN\DFN Projects\Java projects\My projects\sse_demo)
+2026-10-18T16:21:57.269+05:30  INFO 7684 --- [mq_listener] [main] com.dfn.sse_demo.SseDemoApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-10-18T16:21:57.677+05:30  INFO 7684 --- [mq_listener] [main] com.dfn.sse_demo.SseDemoApplication      : Started SseDemoApplication in 0.706 seconds (process running for 1.266)
+2026-10-18T16:22:40.431+05:30  INFO 19004 --- [mq_listener] [main] com.dfn.sse_demo.SseDemoApplication      : Starting SseDemoApplication using Java 21.0.7 with PID 19004 (D:\DFN\DFN Projects\Java projects\My projects\sse_demo\target\classes started by ruvindum in D:\DFN\DFN Projects\Java projects\My projects\sse_demo)
+2026-10-18T16:22:40.432+05:30  INFO 19004 --- [mq_listener] [main] com.dfn.sse_demo.SseDemoApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-10-18T16:22:40.880+05:30  INFO 19004 --- [mq_listener] [main] com.dfn.sse_demo.SseDemoApplication      : Started SseDemoApplication in 0.743 seconds (process running for 1.242)
